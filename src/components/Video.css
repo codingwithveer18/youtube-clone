@@ -44,11 +44,11 @@
 
 }
 .products{
-    margin: 2em 2em;
+  background-color: rgb(189, 215, 215);
+  padding: 2em;
+    margin: 2em ;
+    width: 15em;
     float: left;
-    display: grid;
-    grid-template-columns: repeat(6, 2fr);
-    gap: 5vw;
 }
 .items img{
     width: 100%;
@@ -58,8 +58,11 @@
     margin-bottom: 1em;
     text-align: center;
 } 
+
 .price{
-    font-size: medium;
+    margin-bottom: 0.2em;
+}
+.description{
     margin-bottom: 0.2em;
     text-align: center;
 }
