@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import'./App.css'
+import {Header,Video} from './components/Video'  
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Header></Header>
+    <Video title1="ALL-IN-ONE SHAVER"title2="TRIMMER"title3="MICROWAVE OVEN"title4="WASHING MACHINE"title5="AIR CONDITIONER"title6="REFRIGIRATOR"
+    item ="[ BEST IN ELECTRONICS ]"></Video>
+    </>
+  )
 }
-
-export default App;
+export default App

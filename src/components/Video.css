@@ -1,0 +1,77 @@
+.header{
+    background-color: rgba(0, 0, 0, 0.916);
+    display: grid ;
+    grid-template-columns: repeat(5,3fr);
+    padding:  5px 5px;
+    gap: 10vw;
+  }
+.points{
+    display: grid ;
+    padding: 0px 8px;
+    gap: 10vw;
+    grid-template-columns: repeat(3,3fr);
+  }
+.points a{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18px 8px;
+    text-align: center;
+  }
+.home{
+    padding: 5px 50px;
+  }
+.loginnow{
+    padding: 5px 0px 0px 0px;
+  }
+  /* MEDIA QUERIES FOR HEADER */
+  @media (min-width: 850px) and (max-width: 1470px){
+    .header{
+        width: fit-content;
+    }
+
+}
+  @media (min-width: 400px) and (max-width: 850px){
+    .header{
+        width: fit-content;
+        gap: 15px;
+    }
+    .points{
+        gap: 10px;
+    }
+
+}
+.products{
+    margin: 2em 2em;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 5vw;
+}
+.items img{
+    width: 100%;
+}
+.title{
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+} 
+.price{
+    font-size: medium;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+.search{
+  padding: 10px;
+  text-align: center;
+  border-radius: 10vh;
+  width: 15vw;
+  height: 20px;
+  margin-top: 10px;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: capitalize;
+}
