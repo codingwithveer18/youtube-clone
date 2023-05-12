@@ -1,7 +1,7 @@
 import './Video.css';
 import gdsclogo from './images/gdsclogo.png'
 import loginlogo from './images/login.png'
-
+import PlayButton from './playbutton'
 function Header() {
     return (
         <>
@@ -30,9 +30,20 @@ function Video({ title, id, description, price }) {
                     <div className='title'>{title}</div>
                     <div className='description'>
                         {description}<div>{price}</div></div>
+                    <PlayButton></PlayButton>
+
                 </div>
             </div>
         </>
     )
 }
-export { Header, Video };
+function Footer() {
+    return (
+        <>
+            <div className='footer'>
+                <a href='map to'>🏠 ADDRESS</a>
+            </div>
+        </>
+    )
+}
+export { Header, Video, Footer };
