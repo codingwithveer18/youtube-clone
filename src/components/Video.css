@@ -1,4 +1,4 @@
-*{
+* {
   color: white;
 }
 .products {
@@ -6,7 +6,7 @@
   width: 15em;
   float: left;
 }
-.items img{
+.items img {
   width: 100%;
 }
 .title {
@@ -15,13 +15,14 @@
   font-size: 20px;
 }
 
-.channel , .views{
+.channel,
+.views {
   margin-bottom: 0.2em;
   font-size: medium;
 }
 
 .time {
-  margin-bottom: 0.2em;   
+  margin-bottom: 0.2em;
   padding: 5px;
   font-size: small;
 }

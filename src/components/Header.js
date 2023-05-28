@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <div className="header">
-        <a href="https://youtube.com/" target="_blank" className="home">
+        <a href="https://youtube.com/"  className="home">
           <img src={gdsclogo} width={70} height={50} alt="home " />
         </a>
         <div className="points">

@@ -1,11 +1,11 @@
 import "./Video.css";
 
-function Video({ title, id, channel, views, time, verify,children}) {
+function Video({ title, id, channel, views, time, verify, children }) {
   return (
     <>
       <div className="products">
         <div className="items">
-          <img src={`https://picsum.photos/id/${id}/367/267`} alt="error"/>
+          <img src={`https://picsum.photos/id/${id}/367/267`} alt="error" />
         </div>
         <div className="title">{title}</div>
         <div className="channel">
@@ -16,9 +16,7 @@ function Video({ title, id, channel, views, time, verify,children}) {
           {views} views <span className="time">.</span>
           {time}
         </div>
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </div>
     </>
   );
