@@ -1,28 +1,31 @@
 const products= [{
     id:1,
-    title:'ALL-IN-ONE SPEAKER',
-    description:'Har jagah chalega' ,
-    price:'$40',
+    title:'How to reach 1 Million',
+    channel:'Bhai tera' ,
+    views:'4K',
+    time:' 4 mins',
+    verified:false,
   },{
     id:2,
-    title:'REFRIGIRATOR',
-    description:'Har Cheez Garam Karega' ,
-    price:'$400',
+    title:'React JS Tutotial',
+    channel:'Bhaii tera ' ,
+    views:'40K',
+    time:'40 mins',
+    verified:false,
   },{
     id:3,
-    title:'AC',
-    description:'Nahi Pata' ,
-    price:'$4000',
+    title:'Node JS Tutorial',
+    channel:'Bhai tera' ,
+    views:'400K',
+    time:' 1 hour',
+    verified:true,
   },{
     id:4,
-    title:'Washing Machine',
-    description:'Nahi Pata Kya karu' ,
-    price:'$40000',
-  },{
-    id:5,
-    title:'Kuch toh h',
-    description:'Nahi Pata Kya karu' ,
-    price:'$10000',
+    title:'MERN Stack Tutorial',
+    channel:'Bhai tera ' ,
+    views:'4000K',
+    time:'1.5 hour',
+    verified:true,
   }];
 
   export default products;

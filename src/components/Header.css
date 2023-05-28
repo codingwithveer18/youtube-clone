@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.header {
+  background-color: rgba(0, 0, 0, 0.916);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 5px;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.points {
+  display: flex;
+  justify-content: space-between;
+  gap: 8vw;
+}
+.points a {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 18px 8px;
+}
+.home {
+  padding: 0.5em;
+}
+.search {
+  padding: 10px 60px;
+  text-align: center;
+  border-radius: 8vh;
+  margin: 5px 0px;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: capitalize;
+}
+.loginnow {
+  padding: 5px 0px 0px 0px;
+}
+/* MEDIA QUERIES FOR HEADER */
+/* @media (min-width: 850px) and (max-width: 1470px) {
+  .header {
+    width: fit-content;
+  }
+} */

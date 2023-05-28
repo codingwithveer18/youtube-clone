@@ -1,11 +1,17 @@
-import './playbutton.css';
-
-function PlayButton(){
-    function handleclick(){
-        console.log('CLICKED')
+import "./playbutton.css";
+import { useState } from "react";
+function PlayButton({children,onPlay,onPause}) {
+  const [playing , setBtn]=useState(false); //Wrong Approach
+  function handleclick(e) {
+    e.stopPropagation()
+    if(playing){
+      onPause();
     }
-    return(
-        <button onClick={(handleclick)}>See Details</button>
-    )
+    else
+      onPlay();
+
+    setBtn(!playing);
+  }
+  return <button onClick={handleclick}>{children} : {playing? '⏸️' : '▶️'}</button>;
 }
 export default PlayButton;

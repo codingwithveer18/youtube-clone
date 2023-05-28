@@ -1,23 +1,39 @@
-import './App.css'
-import { Header, Video, Footer } from './components/Video'
-import products from './data/data'
+import "./App.css";
+import { useState } from "react";
+import Video from "./components/Video";
+import Header from "./components/Header";
+import PlayButton from"./components/playbutton"
+import productsDB from "./data/data";
+
+
 function App() {
+  const [products , setProducts]=useState( productsDB)
   return (
     <>
       <Header></Header>
-      <div className='App'>
-        <div className='head'>EXPLORE THE TOP LISTED PRODUCTS</div>
-        {
-          products.map(products=> <Video
+    <div>
+      <button onClick={console.log('HELLO')}>ADD VIDEO</button>
+    </div>
+      <div className="App">
+        {products.map((products) => (
+          <Video
             key={products.id}
             id={products.id}
             title={products.title}
-            description={products.description}
-            price={products.price}
-            ></Video>)
-          }
+            channel={products.channel}
+            views={products.views}
+            time={products.time}
+            verify={products.verified}
+          >
+            <PlayButton
+            /*can use onClick also , it's a user defined onSmash which will execute the command initialised in it */ 
+            onPlay={() =>console.log("PLAYING.." , products.title)} 
+            onPause={() =>console.log("PAUSED..", products.title)}
+          >{products.title}</PlayButton>
+          </Video>
+        ))}
       </div>
     </>
-  )
+  );
 }
-export default App
+export default App;
