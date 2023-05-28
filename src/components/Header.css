@@ -36,13 +36,8 @@
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   text-transform: capitalize;
+  color: black;
 }
 .loginnow {
   padding: 5px 0px 0px 0px;
 }
-/* MEDIA QUERIES FOR HEADER */
-/* @media (min-width: 850px) and (max-width: 1470px) {
-  .header {
-    width: fit-content;
-  }
-} */
