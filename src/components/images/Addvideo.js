@@ -1,25 +1,36 @@
 import "./Addvideo.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const initstate = {
-  channel: "Bhaii meraa",
   verified: true,
   title: "",
   views: "",
   time: "",
+  channel: "",
 };
-function AddVideo({ additem }) {
+function AddVideo({ dispatch, editableVideo }) {
   const [product, setProduct] = useState(initstate);
 
   function handlesubmit(e) {
     //prevent auto reload of page
     e.preventDefault();
-    additem(product);
+    if (editableVideo) {
+      dispatch({ type: "UPDATE", payload: product });
+    } else {
+      dispatch({ type: "ADD", payload: product });
+    }
     setProduct(initstate);
   }
   function handlechange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value });
   }
+
+  useEffect(() => {
+    if (editableVideo) {
+      setProduct(editableVideo);
+    }
+  }, [editableVideo]);
+
   return (
     <form>
       <input
@@ -43,7 +54,16 @@ function AddVideo({ additem }) {
         placeholder="Views"
         value={product.views}
       />
-      <button onClick={handlesubmit}>ADD VIDEO</button>
+      <input
+        type="text"
+        name="channel"
+        onChange={handlechange}
+        placeholder="Channel Name"
+        value={product.channel}
+      />
+      <button onClick={handlesubmit}>
+        {editableVideo ? "EDIT VIDEO" : "ADD VIDEO"}
+      </button>
     </form>
   );
 }

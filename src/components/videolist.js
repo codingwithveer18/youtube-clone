@@ -1,6 +1,6 @@
 import Video from "./Video";
 import PlayButton from "./playbutton";
-function VideoList({ products }) {
+function VideoList({ products,dispatch,editVideo }) {
   return (
     <>
       {products.map((products) => (
@@ -12,6 +12,8 @@ function VideoList({ products }) {
           views={products.views}
           time={products.time}
           verify={products.verified}
+          editVideo={editVideo}
+          dispatch={dispatch}
         >
           <PlayButton
             /*can use onClick also , it's a user defined onSmash which will execute the command initialised in it */
