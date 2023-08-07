@@ -8,18 +8,12 @@ import Usevideodispatch from "../hooks/videodispatch";
 function VideoList({ editVideo }) {
   const products = Usevideos();
   const dispatch = Usevideodispatch();
-  const url = "https://my.api.mockaroo.com/videos.json?key=790dc270";
-  const url1 = "https://my.api.mockaroo.com/videos.json?key=790dc270";
+  const url ="https://my.api.mockaroo.com/videos.json?key=e8c5bc00";
 
   useEffect(() => {
     async function getdata() {
-      try {
     const res = await axios.get(url);
     dispatch({ type: "LOAD", payload: res.data });
-  } catch (error) {
-    const res = await axios.get(url1);
-    dispatch({ type: "LOAD", payload: res.data });
-  }
     }
     getdata()
   }, [dispatch]);

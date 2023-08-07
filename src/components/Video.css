@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap:wrap ;
   align-items: baseline;
+  justify-content: center;
 }
 .products {
   margin: 1em 1em;
