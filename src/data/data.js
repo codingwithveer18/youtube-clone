@@ -1,4 +1,4 @@
-const products = [
+const ProductsDB = [
   {
     id: 1,
     title: "How to reach 1 Million",
@@ -73,4 +73,4 @@ const products = [
   },
 ];
 
-export default products;
+export default ProductsDB;

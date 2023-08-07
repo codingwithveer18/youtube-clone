@@ -9,23 +9,16 @@ function VideoList({ editVideo }) {
   const products = Usevideos();
   const dispatch = Usevideodispatch();
   const url = "https://my.api.mockaroo.com/videos.json?key=790dc270";
-  async function handleclick() {
-    try {
-      const res = await axios.get(url);
-      dispatch({ type: "LOAD", payload: res.data });
-    }catch (error) {
-      console.error("Error fetching data from the API. Loading data from data.js.");
-      dispatch({ type: "LOAD", payload: products });
-    }
-  }
+  const url1 = "https://my.api.mockaroo.com/videos.json?key=790dc270";
+
   useEffect(() => {
     async function getdata() {
       try {
     const res = await axios.get(url);
     dispatch({ type: "LOAD", payload: res.data });
   } catch (error) {
-    console.error("Error fetching data from the API. Loading data from data.js.");
-    dispatch({ type: "LOAD", payload: products });
+    const res = await axios.get(url1);
+    dispatch({ type: "LOAD", payload: res.data });
   }
     }
     getdata()
@@ -54,7 +47,6 @@ function VideoList({ editVideo }) {
             </PlayButton>
           </Video>
         ))}
-        <button onClick={handleclick}>REFRESH VIDEOS</button>
       </div>
     </>
   );

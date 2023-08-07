@@ -1,21 +1,16 @@
-/* Assuming you already have styles for .App and .darkmode (or .lightmode) in your existing CSS */
-
-/* New CSS code for the VideoList component */
 .VideoList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
-    gap: 20px; /* Add some spacing between the cards */
+    justify-content: center;
+    gap: 20px;
   }
   
   .Video {
-    width: 300px; /* Adjust this value as per your preference for each card's width */
+    width: 300px; 
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* Add other styles as needed for each card */
   }
-  
-  /* Style for PlayButton and other card elements can be added here */
+
   
