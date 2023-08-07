@@ -5,17 +5,18 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 5px 5px;
+  padding: 5px 0px ;
   justify-content: space-evenly;
   width: 100%;
-  margin-bottom: 1em;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .points {
   display: flex;
   justify-content: space-between;
-  gap: 8vw;
+  gap: 7vw;
 }
+
 .points a {
   color: white;
   font-family: "Inter", sans-serif;
@@ -24,20 +25,23 @@
   text-decoration: none;
   padding: 18px 8px;
 }
+
 .home {
   padding: 0.5em;
 }
+
 .search {
-  padding: 10px 60px;
-  text-align: center;
-  border-radius: 8vh;
-  margin: 5px 0px;
-  font-size: 3vh;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  text-transform: capitalize;
-  color: black;
+  padding: 5px 13px;
+    margin: 9px;
+    text-align: center;
+    border-radius: 8vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: capitalize;
+    color: black;
 }
+
 .loginnow {
   padding: 5px 0px 0px 0px;
 }

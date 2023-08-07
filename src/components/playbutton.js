@@ -1,17 +1,20 @@
 import "./playbutton.css";
-import { useState } from "react";
+import { useContext,useState } from "react";
+import ThemeContext from "./context/theme";
+
 function PlayButton({ children, onPlay, onPause }) {
+  const themeContext = useContext(ThemeContext);
   const [playing, setBtn] = useState(false); //Wrong Approach
   function handleclick(e) {
     e.stopPropagation();
     if (playing) {
       onPause();
     } else onPlay();
-
+    
     setBtn(!playing);
   }
   return (
-    <button onClick={handleclick}>
+    <button className={themeContext} onClick={handleclick}>
       {children} : {playing ? "⏸️" : "▶️"}
     </button>
   );

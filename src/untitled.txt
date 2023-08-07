@@ -1,0 +1,26 @@
+pure function : Those who doesn't have any external dependency to a state
+        ex:
+        function sum(a,b){
+            return a+b;
+        } 
+        sum(1,2)
+
+impure function : Those who have external dependency on state
+        ex  :  
+        let n=1;
+        function sum(a,b){
+            return a+b+n;
+        } 
+        sum(1,2)
+
+In react we want components to be pure means if at level of props , state, context if these remain same then the output will also be same or desired 
+if getting different result everytime then the component if impure
+
+Whenever a function component re-run and it produces some return  and render the UI - Render 
+if this render happens first time , then it is known as mouunting
+if the component got removed from the DOM then it is know as demounting
+
+Useeffect When : Jbh aapko on loading hi kuch krna ho , example ; Api calling   
+Memoization : It's basically a caching , storing the result so that we don't have to do those things/calculations again and again
+        example : Fibonacci series
+        it can also be done at components level
