@@ -1,5 +1,5 @@
 import "./playbutton.css";
-import { useContext,useState } from "react";
+import { useContext, useState } from "react";
 import ThemeContext from "./context/theme";
 
 function PlayButton({ children, onPlay, onPause }) {
@@ -10,7 +10,7 @@ function PlayButton({ children, onPlay, onPause }) {
     if (playing) {
       onPause();
     } else onPlay();
-    
+
     setBtn(!playing);
   }
   return (

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Usevideodispatch from "../../hooks/videodispatch";
 
 const initstate = {
-  verified: true,
+  verified: "",
   title: "",
   views: "",
   time: "",
@@ -53,7 +53,6 @@ function AddVideo({ editableVideo }) {
           onChange={handlechange}
           value={product.title}
           className="input"
-
         />
         <label className="label">Title</label>
       </div>

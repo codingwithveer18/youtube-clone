@@ -1,22 +1,29 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import Usevideos from "../hooks/context";
 import Video from "./Video";
 import PlayButton from "./playbutton";
 import axios from "axios";
 import Usevideodispatch from "../hooks/videodispatch";
+import ProductsDB from "../data/data";
 
 function VideoList({ editVideo }) {
   const products = Usevideos();
-  const dispatch = Usevideodispatch();
-  const url ="https://my.api.mockaroo.com/videos.json?key=e8c5bc00";
+  const dispatches = Usevideodispatch();
+  const url = "https://my.api.mockaroo.com/videos.json?key=91687e20";
+  const savedProducts = ProductsDB;
 
   useEffect(() => {
     async function getdata() {
-    const res = await axios.get(url);
-    dispatch({ type: "LOAD", payload: res.data });
+      try {
+        const res = await axios.get(url);
+        dispatches({ type: "LOAD", payload: res.data });
+      } catch (error) {
+        dispatches({ type: "LOAD", payload: savedProducts });
+      }
     }
-    getdata()
-  }, [dispatch]);
+    getdata();
+    // eslint-disable-next-line
+  }, [dispatches]);
 
   return (
     <>

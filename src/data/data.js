@@ -40,6 +40,14 @@ const ProductsDB = [
     verified: true,
   },
   {
+    id: 6,
+    title: "Mongoose Tutorial",
+    channel: "Coder Tu",
+    views: "100K",
+    time: "3.5 hour",
+    verified: true,
+  },
+  {
     id: 7,
     title: "Cloud Tutorial",
     channel: "Coder Sasur",
@@ -69,6 +77,22 @@ const ProductsDB = [
     channel: "Coder ji",
     views: "4000K",
     time: "1.5 hour",
+    verified: false,
+  },
+  {
+    id: 11,
+    title: "ClouTut",
+    channel: "Coderrr ji",
+    views: "400000K",
+    time: "2.5 hour",
+    verified: true,
+  },
+  {
+    id: 12,
+    title: "Clorial",
+    channel: "Coder jii",
+    views: "40000K",
+    time: "2.5 hour",
     verified: false,
   },
 ];

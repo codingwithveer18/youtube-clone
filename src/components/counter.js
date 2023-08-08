@@ -16,7 +16,7 @@ function Counter() {
       return 1;
     }
     return fib(n - 1) + fib(n - 2);
-  },[]);
+  }, []);
   //if fib(40) we do , it will take to compute the value and hence freezes the browser
   //usememo hook basically used to store the value
   const fibmemo = useMemo(() => fibcall(num), [num, fibcall]);

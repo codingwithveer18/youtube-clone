@@ -12,7 +12,7 @@ body {
   align-items: center;
   background-color: #333333;
   flex-grow: 1; /* Allow the div to grow and fill all available vertical space */
-  min-height: 100%; /* Set the minimum height to 100% of the viewport height */
+  min-height: 100vh; /* Use vh units to ensure the minimum height covers the viewport */
 }
 
 .lightmode {

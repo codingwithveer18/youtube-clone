@@ -1,5 +1,5 @@
 import "./Video.css";
-import { useContext} from "react";
+import { useContext } from "react";
 import ThemeContext from "./context/theme";
 import Usevideodispatch from "../hooks/videodispatch";
 
