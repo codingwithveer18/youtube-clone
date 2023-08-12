@@ -5,8 +5,14 @@
   justify-content: center;
 }
 .products {
-  margin: 1em 1em;
-  width: 13.5em;
+    display: flex;
+    margin: 1em;
+    position: relative;
+    width: 13.5em;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
   position: relative;
 }
@@ -61,4 +67,12 @@
 }
 .darkmode{
   color: white;
+}
+
+/* Add a media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .products {
+    width: 90%; /* Adjust the width of the items */
+    margin: 1em auto; /* Center-align the items */
+  }
 }

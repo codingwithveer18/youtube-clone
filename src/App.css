@@ -22,7 +22,8 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10vh;
+  gap: 4vh;
+  flex-direction: column;
 }
 .btn {
   margin-top: 10px;
@@ -251,4 +252,19 @@ body {
 .btn:active {
   box-shadow: none;
   transform: translate(3px, 3px);
+}
+
+/* Adjust the background color for lightmode on small screens */
+@media (max-width: 768px) {
+  .lightmode {
+    background-color: #e2e2e2;
+  }
+}
+
+/* Add a media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .butn {
+    justify-content: center; /* Center-align the buttons */
+  }
+
 }

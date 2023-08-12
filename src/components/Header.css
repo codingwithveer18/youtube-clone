@@ -45,3 +45,30 @@
 .loginnow {
   padding: 5px 0px 0px 0px;
 }
+
+/* Add a media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .points {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 55px;
+
+  }
+  .home {
+    display: none;
+  }
+  .header {
+    background-color: rgba(0, 0, 0, 0.916);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: row;
+  }
+}

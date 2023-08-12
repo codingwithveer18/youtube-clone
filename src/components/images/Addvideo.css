@@ -1,13 +1,17 @@
 .form {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: row; /* Change to column layout on smaller screens */
+  align-items: center; /* Center-align the form elements */
+  gap: 15px; /* Add some spacing between form elements */
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin: 30px 15px 5px 15px;
+  margin: 15px; /* Reduce margin for better spacing on smaller screens */
   position: relative;
   color: white;
 }
@@ -30,8 +34,8 @@ color: rgb(0, 0, 0);
 }
 
 .input {
-  width: 200px;
-  height: 45px;
+  width: 100%; /* Make the input full width */
+  height: 40px; /* Adjust the height for better appearance */
   border: none;
   outline: none;
   padding: 0px 7px;
@@ -66,4 +70,9 @@ color: rgb(0, 0, 0);
 .lightmode .container .input:valid,
 .lightmode .container .input:focus {
   box-shadow: 2px 6px 7px rgb(0 0 0), -1px 1px 8px rgb(35 30 30 / 40%), inset 3px 3px 10px rgb(223 223 223), inset -1px -1px 6px rgb(222 222 222);
+}
+
+/* Add a media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+
 }
