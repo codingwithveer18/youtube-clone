@@ -1,5 +1,7 @@
 import "./App.css";
-import Header from "./components/Header";
+import "./components/Header.css";
+import ytlogo from "./components/images/ytlogo.png";
+import loginlogo from "./components/images/login.png";
 import AddVideo from "./components/images/Addvideo";
 import { useReducer, useState } from "react";
 import VideoList from "./components/videolist";
@@ -63,18 +65,45 @@ function App() {
       dispatches({ type: "LOAD", payload: fallbackProducts });
     }
   }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <>
-      <Header></Header>
+<div className={`App ${mode}`}>
       <ThemeContext.Provider value={mode}>
         <Videoscontext.Provider value={product}>
           <Videosdispatchcontext.Provider value={dispatches}>
-            <div className={`App ${mode}`}>
-              <div className="butn">
-                <button className="btn" onClick={handleclick}>
-                  REFRESH VIDEOS
-                </button>
+            <div className={`header ${isMenuOpen ? "menu-open" : ""}`}>
+        <div className="hamyt" onClick={toggleMenu}>
+          <div className="hamburger">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          </div>
+        <a href="https://youtube.com/" rel="noreferrer" target="_blank" className="home">
+          <img src={ytlogo} width={150} alt="home" className="image"/>
+        </a>
+        </div>
+          <input type="search" className="search" placeholder=" Search" />
+        <div className={`points ${isMenuOpen ? "menu-open" : ""}`}>
+          {isMenuOpen && (
+            <div className="menu">
+              <a href="products">EXPLORE</a>
+              <a href="trend">TRENDING</a>
+            </div>
+          )}
+        </div>
+        <a href="https://testing-mydatabase.000webhostapp.com/index.php" rel="noreferrer" target="_blank" className="loginnow">
+          <img src={loginlogo} width={50}alt="login" className="image" />
+        </a>
+        </div>
+            <div className="butn">
+              <button className="btn" onClick={handleclick}>
+                REFRESH VIDEOS
+              </button>
                 <label
                   className="theme-switch"
                   onChange={() =>
@@ -110,13 +139,15 @@ function App() {
                   </div>
                 </label>
               </div>
-              <AddVideo editableVideo={editableVideo}></AddVideo>
-              <VideoList editVideo={editVideo}></VideoList>
+              <div className={`content ${isMenuOpen ? "menu-open" : ""}`}>
+              <AddVideo editableVideo={editableVideo} />
+              <VideoList editVideo={editVideo} />
             </div>
           </Videosdispatchcontext.Provider>
         </Videoscontext.Provider>
       </ThemeContext.Provider>
-    </>
+    </div>
   );
 }
+
 export default App;

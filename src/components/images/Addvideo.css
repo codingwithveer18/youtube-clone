@@ -5,6 +5,7 @@
   gap: 15px; /* Add some spacing between form elements */
   flex-wrap: wrap;
   justify-content: center;
+  margin: 15px 0 0 0;
 }
 
 .container {

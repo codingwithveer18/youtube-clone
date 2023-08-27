@@ -1,7 +1,7 @@
 import "./Video.css";
 import { useContext } from "react";
 import ThemeContext from "./context/theme";
-import Usevideodispatch from "../hooks/videodispatch";
+// import Usevideodispatch from "../hooks/videodispatch";
 
 function Video({
   id,
@@ -14,7 +14,7 @@ function Video({
   editVideo,
 }) {
   const themeContext = useContext(ThemeContext);
-  const dispatch = Usevideodispatch();
+  // const dispatch = Usevideodispatch();
 
   // useEffect(() => {
   //   const idx = setInterval(() => {//will give the id of the element who were rendering
@@ -28,12 +28,12 @@ function Video({
   return (
     <>
       <div className={`products ${themeContext}`}>
-        <button
+        {/* <button
           className="close"
           onClick={() => dispatch({ type: "DELETE", payload: id })}
         >
           X
-        </button>
+        </button> */}
         <button className="edit" onClick={() => editVideo(id)}>
           Edit
         </button>
