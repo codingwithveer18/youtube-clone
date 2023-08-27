@@ -84,7 +84,7 @@ function App() {
           <div className="bar"></div>
           </div>
         <a href="https://youtube.com/" rel="noreferrer" target="_blank" className="home">
-          <img src={ytlogo} width={150} alt="home" className="image"/>
+          <img src={ytlogo} width={150} alt="home"/>
         </a>
         </div>
           <input type="search" className="search" placeholder=" Search" />

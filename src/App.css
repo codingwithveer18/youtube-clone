@@ -428,6 +428,7 @@ body {
 .hamyt{
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 /* Adjust the background color for lightmode on small screens
